@@ -130,7 +130,7 @@ def generate_pdf(df_city: pd.DataFrame, cidade: str, estado: str):
             pdf.cell(col_w[2], 7, cap, 1, align='R')
             pdf.cell(col_w[3], 7, idade, 1, align='C', ln=1)
             
-    return bytes(pdf.output(dest='S').encode('latin-1'))
+    return bytes(pdf.output())
 
 # --- BLOCO 5: APP MAIN ---
 def main():
@@ -398,4 +398,5 @@ def main():
                 st.button("🔒 Requisito: Fixe um Município no Radar para desbloquear emissão de Dossiê PDF", disabled=True, use_container_width=True)
 
 if __name__ == "__main__":
+
     main()
