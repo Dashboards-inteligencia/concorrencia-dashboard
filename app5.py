@@ -327,13 +327,26 @@ def main():
                     category_orders={"bairro_norm": top_bairros_list},
                     color_discrete_sequence=px.colors.qualitative.Prism
                 )
-                fig_bairros.update_layout(template="plotly_white", height=600, legend=dict(orientation="h", y=1.05))
+                
+                # --- CORREÇÃO APLICADA AQUI: Espaço no topo (margin) e ancoragem centralizada da legenda ---
+                fig_bairros.update_layout(
+                    template="plotly_white", 
+                    height=650, 
+                    margin=dict(t=120), # Aumenta a margem superior
+                    legend=dict(
+                        orientation="h", 
+                        yanchor="bottom", 
+                        y=1.02, 
+                        xanchor="center", 
+                        x=0.5
+                    )
+                )
+                
                 st.plotly_chart(fig_bairros, use_container_width=True)
             else:
                 st.info("Dados insuficientes de Bairro ou Segmento para esta localidade.")
         else:
             st.warning("⚠️ Selecione uma Cidade ESPECÍFICA no menu lateral para visualizar o raio-x de bairros.")
-
     # ==========================================
     # ABA 3: PERFIL DE RISCO E PORTE
     # ==========================================
