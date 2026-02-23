@@ -337,13 +337,26 @@ def main():
                     category_orders={"bairro_norm": top_bairros_list},
                     color_discrete_sequence=px.colors.qualitative.Safe
                 )
-                fig_bairros.update_layout(template="plotly_white", height=600, legend=dict(orientation="h", y=1.05))
+                
+                # --- CORREÇÃO APLICADA AQUI: Ajuste da margem (margin) e âncora (yanchor/xanchor) ---
+                fig_bairros.update_layout(
+                    template="plotly_white", 
+                    height=650, 
+                    margin=dict(t=120), # Aumenta o espaço livre no topo do gráfico
+                    legend=dict(
+                        orientation="h", 
+                        yanchor="bottom", 
+                        y=1.02, 
+                        xanchor="center", 
+                        x=0.5
+                    )
+                )
+                
                 st.plotly_chart(fig_bairros, use_container_width=True)
             else:
                 st.info("Dados insuficientes de Bairro ou Segmento para esta localidade.")
         else:
             st.warning("⚠️ Selecione uma Cidade ESPECÍFICA no menu lateral para visualizar os micro-mercados.")
-
     # ==========================================
     # ABA 3: PERFIL DE MATURIDADE E TIER
     # ==========================================
