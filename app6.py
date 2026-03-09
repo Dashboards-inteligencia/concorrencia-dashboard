@@ -24,7 +24,7 @@ st.set_page_config(
 # Aqui mapeamos os caminhos, cores e regras de negócio exatas de cada setor
 CONFIG_NICHOS = {
     "Concorrência (Seguros)": {
-        "path": r"C:\Users\Aleffm\Desktop\Projetos\P_Receita_int_mercado\relatorio_concorrencia\competitors_processed.parquet",
+        "path": "competitors_processed.parquet",
         "icon": "🎯",
         "title": "Inteligência Competitiva e Saturação",
         "theme_color": "#c0392b", # Vermelho Sangue
@@ -40,7 +40,7 @@ CONFIG_NICHOS = {
         "desc": "Mapeamento de saturação do mercado de Seguros. Identifique oceanos azuis, monitore os Big Players e encontre seus rivais diretos (PMEs)."
     },
     "Saúde Privada": {
-        "path": r"C:\Users\Aleffm\Desktop\Projetos\P_Receita_int_mercado\relatorio_saude\leads_saude_processed.parquet",
+        "path": "leads_saude_processed.parquet",
         "icon": "🩺",
         "title": "Inteligência em Saúde Privada",
         "theme_color": "#003f5c", # Azul
@@ -51,7 +51,7 @@ CONFIG_NICHOS = {
         "desc": "Mapeamento de Hospitais, Clínicas e Centros de Diagnóstico para prospecção de planos de saúde, insumos e seguros corporativos."
     },
     "Turismo & Hospitalidade": {
-        "path": r"C:\Users\Aleffm\Desktop\Projetos\P_Receita_int_mercado\relatorio_turismo\Leads_Turismo.parquet",
+        "path": "Leads_Turismo_SMEI.parquet",
         "icon": "✈️",
         "title": "Inteligência em Turismo e Hospitalidade",
         "theme_color": "#D35400", # Terracota
@@ -62,7 +62,7 @@ CONFIG_NICHOS = {
         "desc": "Localização de Redes Hoteleiras, grandes agências e polos gastronômicos com alta demanda de capital humano e retenção."
     },
     "Seguros & Financeiro": {
-        "path": r"C:\Users\Aleffm\Desktop\Projetos\P_Receita_int_mercado\relatorio_seguradora\Leads_Seguros_Financeiro.parquet",
+        "path": "Leads_Seguros_Financeiro.parquet",
         "icon": "🛡️",
         "title": "Inteligência de Mercado: Seguradoras",
         "theme_color": "#1A2530", # Dark Blue
@@ -498,3 +498,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
