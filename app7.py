@@ -22,7 +22,7 @@ st.set_page_config(
 # --- BLOCO 2: DICIONÁRIO DE CONFIGURAÇÃO DOS NICHOS ---
 CONFIG_NICHOS = {
     "Construção Civil": {
-        "path": r"C:\Users\Aleffm\Desktop\Projetos\P_Receita_int_mercado\relatorio_construcao\construction_market_processed.parquet",
+        "path": "construction_market_processed.parquet",
         "icon": "🏗️",
         "title": "Inteligência em Engenharia & Construção",
         "theme_color": "#d35400", # Laranja Tijolo
@@ -34,7 +34,7 @@ CONFIG_NICHOS = {
         "desc": "Priorize a força de vendas identificando regiões com alta concentração de <b>Obras Grandes/Incorporadoras</b>. Utilize a segmentação de risco (Canteiro Pesado) para vendas consultivas de Seguro Saúde Ocupacional."
     },
     "Educação & Ensino": {
-        "path": r"C:\Users\Aleffm\Desktop\Projetos\P_Receita_int_mercado\relatorio_educacao\education_market_processed.parquet",
+        "path": "education_market_processed.parquet",
         "icon": "🎓",
         "title": "Mapeamento Estratégico: Setor de Educação",
         "theme_color": "#173f5f", # Azul Escuro
@@ -46,7 +46,7 @@ CONFIG_NICHOS = {
         "desc": "Instituições de Ensino possuem dores específicas como retenção de professores e exigências sindicais. Identifique regiões de volume, mas priorize <b>Grandes Colégios/Universidades (High Ticket)</b>."
     },
     "Setor de TI (Tecnologia)": {
-        "path": r"C:\Users\Aleffm\Desktop\Projetos\P_Receita_int_mercado\relatorio_ti\it_market_processed.parquet",
+        "path": "it_market_processed.parquet",
         "icon": "💻",
         "title": "Inteligência de Mercado: TI & Seguros Saúde",
         "theme_color": "#005b96", # Azul Tech
@@ -58,7 +58,7 @@ CONFIG_NICHOS = {
         "desc": "Mapeamento de empresas de tecnologia. Direcione a força de vendas cruzando <b>Densidade de Leads</b> com <b>Perfil de Risco (Mortalidade)</b>, focando em Oceanos Azuis de alta estabilidade."
     },
     "Varejo Nacional": {
-        "path": r"C:\Users\Aleffm\Desktop\Projetos\P_Receita_int_mercado\relatorio_assets_varejo\leads_varejo_SMEI.parquet",
+        "path": "leads_varejo_SMEI.parquet",
         "icon": "🛒",
         "title": "Inteligência Varejista B2B",
         "theme_color": "#8e44ad", # Roxo
@@ -70,7 +70,6 @@ CONFIG_NICHOS = {
         "desc": "Análise de alto volume para o mercado varejista. Filtre redes de comércio e identifique as principais praças de consumo para vendas em escala."
     }
 }
-
 # --- BLOCO 3: CARGA DE DADOS UNIFICADA ---
 @st.cache_data(ttl=3600)
 def load_data(nicho: str) -> pd.DataFrame:
@@ -556,6 +555,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
