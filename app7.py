@@ -555,8 +555,7 @@ def main():
         render_dashboard(selecao)
 
 if __name__ == "__main__":
-main()
-if __name__ == "__main__":
     main()
+
 
 
